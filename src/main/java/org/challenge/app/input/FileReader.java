@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.challenge.app.model.Plateau;
 import org.challenge.app.model.Rover;
 import org.challenge.app.util.Direction;
 import org.challenge.app.util.ERROR;
@@ -97,7 +98,7 @@ class FileReader {
 		return upper_right_y;
 	}
 	
-	public List<Commander> readCommanders()throws MarseRoverException{
+	public List<Commander> readCommanders(final Plateau plateau)throws MarseRoverException{
 		
 		List <Commander> commanders = null;
 		
@@ -139,7 +140,7 @@ class FileReader {
 				commanders = new ArrayList<Commander>();	
 			}	
 			
-			Rover rover= new Rover(roverInitCordinateX,roverInitCordinateY,enumDir);
+			Rover rover= new Rover(roverInitCordinateX,roverInitCordinateY,enumDir,plateau);
 			char [] roverInstructions ;
 			
 			try {

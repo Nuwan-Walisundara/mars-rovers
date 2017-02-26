@@ -34,19 +34,33 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp1()
+   public void testApp1()
     {
     	App app =new App();
     	app.main(BASE_DIR+File.separatorChar+"test1.txt");
         assertTrue( true );
-    }
+    } 
     /**
      * Rigourous Test :-)
-     */
-    public void testApp2()
+     */ 
+   public void testApp2()
     {
     	App app =new App();
     	app.main(BASE_DIR+File.separatorChar+"test2.txt");
         assertTrue( true );
-    }
+    }   
+    /**
+     * Rigourous Test :- 3 
+     * 	rover coordinate are lager to the max Plateau
+     */
+    public void testApp3()
+    {
+    	App app =new App();
+    	app.main(BASE_DIR+File.separatorChar+"test3.txt");
+    } 
+    public void testApp4()
+    {
+    	App app =new App();
+    	app.main(BASE_DIR+File.separatorChar+"test4.txt");
+    } 
 }

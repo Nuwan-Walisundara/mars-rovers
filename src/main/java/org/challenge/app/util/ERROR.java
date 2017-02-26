@@ -16,7 +16,9 @@ INVALID_INSTRUCTION("MR011"," Invalid instruction given  "),
 HIT_NORTH_WALL("MR012"," Rover hit North wall , stop movement  "), 
 HIT_WEST_WALL("MR013"," Rover hit west wall , stop movement  "), 
 HIT_SOUTH_WALL("MR014"," Rover hit south wall , stop movement  "), 
-HIT_EAST_WALL("MR015"," Rover hit east wall , stop movement  ");
+HIT_EAST_WALL("MR015"," Rover hit east wall , stop movement  "), 
+INVALID_X_CORDINATE("MR016","Initial x coordinate is out side of Platu . Rover cannot place out side of Platu.   "),
+INVALID_Y_CORDINATE("MR017","Initial y coordinate  is out side of Platu. Rover cannot place out side of Platu.   ");
 	
 	private String code;
 	private String msg;

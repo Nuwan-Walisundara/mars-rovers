@@ -20,7 +20,7 @@ public class Invoker {
 		/*
 		 * reading roves from the file
 		 */
-		commanders = fileReader.readCommanders();
+		commanders = fileReader.readCommanders(plateau);
 		
 	}
 	

@@ -22,8 +22,18 @@ public class Rover implements Serializable {
 	private static final long serialVersionUID = -8942760322995194643L;
 	
 	
-	public Rover(int cordinateX, int cordinateY, Direction direction) {
+	public Rover(int cordinateX, int cordinateY, Direction direction,final Plateau plateau) throws MarseRoverException{
 		super();
+		
+		if(plateau.getxMin()>cordinateX  || cordinateX>plateau.getxMax()){
+			throw new MarseRoverException(ERROR.INVALID_X_CORDINATE);
+		}
+		 
+		
+		if(plateau.getyMin()>cordinateY ||  cordinateY>plateau.getyMax()){
+			throw new MarseRoverException(ERROR.INVALID_Y_CORDINATE);
+		}
+		
 		this.cordinateX = cordinateX;
 		this.cordinateY = cordinateY;
 		this.direction = direction;
