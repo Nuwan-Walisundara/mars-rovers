@@ -1,5 +1,7 @@
 package org.challenge.app;
 
+import java.io.File;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -10,6 +12,7 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
+	private final static String BASE_DIR="/RandD/Test/EYEPAX/mars-rovers/testresource";
     /**
      * Create the test case
      *
@@ -31,8 +34,19 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
+    public void testApp1()
     {
+    	App app =new App();
+    	app.main(BASE_DIR+File.separatorChar+"test1.txt");
+        assertTrue( true );
+    }
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp2()
+    {
+    	App app =new App();
+    	app.main(BASE_DIR+File.separatorChar+"test2.txt");
         assertTrue( true );
     }
 }

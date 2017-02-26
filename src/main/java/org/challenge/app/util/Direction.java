@@ -6,30 +6,29 @@ import java.util.Map;
 
 public enum Direction {
 
-	NORTH('N'),
-	EAST('E'),
-	SOUTH('S'),
-	WEST('W'),
-	UNDEFINED('U');
-	
-	
+	NORTH('N'), EAST('E'), SOUTH('S'), WEST('W'), UNDEFINED('U');
+
 	private char direction;
-	private static Map<Character,Direction> directionsMap = new HashMap<Character,Direction>();
-	
-	Direction(char direct){
-	this.direction =direct;	
+	private static Map<Character, Direction> directionsMap = new HashMap<Character, Direction>();
+
+	Direction(char direct) {
+		this.direction = direct;
 	}
-	 
+
 	static {
-		for (Direction enumVal : EnumSet.allOf(Direction.class)){
-			directionsMap.put( enumVal.direction , enumVal);
+		for (Direction enumVal : EnumSet.allOf(Direction.class)) {
+			directionsMap.put(enumVal.direction, enumVal);
 		}
 	}
-	
+
 	public static Direction get(char direction) {
-		if(directionsMap.containsKey(direction)){
-			directionsMap.get(direction);
+		if (directionsMap.containsKey(direction)) {
+			return directionsMap.get(direction);
 		}
 		return UNDEFINED;
+	}
+
+	public char getCode() {
+		return this.direction;
 	}
 }

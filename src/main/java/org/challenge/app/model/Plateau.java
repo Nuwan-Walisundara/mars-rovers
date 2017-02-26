@@ -25,8 +25,8 @@ public class Plateau implements Serializable{
 	}
 	
 	
-	int xMax;
-	int yMax;
+	private int xMax;
+	private int yMax;
 	
 	public int getxMax() {
 		return xMax;

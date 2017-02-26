@@ -30,7 +30,16 @@ public class Commander {
 	public void moveOver(final Plateau plateau) throws MarseRoverException{
 		log.info("Trigger move over Plateau :"+plateau);
 		for (Instruction instruction : insructionList) {
-			rover.performAction(instruction,plateau);
+			try {
+				rover.performAction(instruction,plateau);
+			} catch (Exception e) {
+				log.error("moveOver" ,e);
+			}
 		}
+	}
+
+	public String getRoverCordinates() {
+		// TODO Auto-generated method stub
+		return rover.getCordinateX()+" " +rover.getCordinateY()+ " " +rover.getDirection().getCode();
 	}
 }

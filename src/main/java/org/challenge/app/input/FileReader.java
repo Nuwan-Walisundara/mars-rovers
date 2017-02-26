@@ -99,7 +99,7 @@ class FileReader {
 	
 	public List<Commander> readCommanders()throws MarseRoverException{
 		
-		List <Commander> commanders = Collections.emptyList();
+		List <Commander> commanders = null;
 		
 		for(int x=1; x<stringArray.length; x+=2){
 			String[] firstLineOfRover = stringArray[x].split(" ");
@@ -165,6 +165,9 @@ class FileReader {
 			}
 			commanders.add(commander);
 			
+		}
+		if(commanders.isEmpty()){
+			return Collections.emptyList();
 		}
 		return commanders;
 	}

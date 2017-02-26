@@ -12,7 +12,11 @@ INVALID_ROVER_DIRECTION_CHAR("MR008","Initial rover direction need to be a char 
 EMPTY_ROVER_INSTRUCTIONS("MR009","empty instruction sequece defined "),
 INVALID_ROVER_INSTRUCTION("MR009","INSTRUCTION need to be L,R,M "),
 INVALID_ROTATION("MR010"," Rotation Undefined for the rover  "),
-INVALID_INSTRUCTION("MR011"," Invalid instruction given  ");
+INVALID_INSTRUCTION("MR011"," Invalid instruction given  "), 
+HIT_NORTH_WALL("MR012"," Rover hit North wall , stop movement  "), 
+HIT_WEST_WALL("MR013"," Rover hit west wall , stop movement  "), 
+HIT_SOUTH_WALL("MR014"," Rover hit south wall , stop movement  "), 
+HIT_EAST_WALL("MR015"," Rover hit east wall , stop movement  ");
 	
 	private String code;
 	private String msg;

@@ -26,7 +26,7 @@ public enum Instruction {
 	
 	public static Instruction get(char direction) {
 		if(InstructionMAP.containsKey(direction)){
-			InstructionMAP.get(direction);
+			return InstructionMAP.get(direction);
 		}
 		return UNDEFINED;
 	}

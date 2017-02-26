@@ -25,7 +25,7 @@ public class Invoker {
 	}
 	
 	
-	public void invoke()throws MarseRoverException{
+	public void invokeMove()throws MarseRoverException{
 		log.info(" Invoke move ");
 		for (Commander commander : commanders) {
 		
@@ -35,6 +35,14 @@ public class Invoker {
 				log.warn(" Commander stoped "+ e);
 				continue;
 			}
+		}
+	}
+	
+	public void printLastLocation()throws MarseRoverException{
+		log.info(" Invoke move ");
+		for (Commander commander : commanders) {
+		
+			System.out.println(commander.getRoverCordinates());
 		}
 	}
 	
