@@ -23,8 +23,9 @@ Two options are avalable
 	export the project into eclipse IDE. Specify the the file name as argument. trigger the run as option.
 
 ### 2.2 create as a library
-	go to folder. run as maven clean install.At this time tescases will trigger. Add commons-logging to class path .
-run as java -jar mars-rovers-1.0-SNAPSHOT.jar 'Path to txt'
+Go to folder. run as maven clean install.At this time tescases will trigger. Add commons-logging to class path .
+run as 
+	java -jar mars-rovers-1.0-SNAPSHOT.jar 'Path to txt'
 
 ### 2.2 Create as executable jar
 run "mvn clean compile assembly:single" . This will bundle all the dependencies.
