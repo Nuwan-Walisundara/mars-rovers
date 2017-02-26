@@ -3,13 +3,10 @@ package org.challenge.app;
 import org.challenge.app.input.Invoker;
 import org.challenge.app.util.MarseRoverException;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
-   /* public static void main( String[] args )
+    public static void main( String[] args )
     {
     	try {
     		Invoker invoker =	new Invoker();
@@ -18,9 +15,9 @@ public class App
     		invoker.invokeMove();
     		 
 		} catch (MarseRoverException e) {
-			System.err.println(e);
+			e.printStackTrace();
 		}
-    }*/
+    } 
 	
 	
 	public  void main( String args )
